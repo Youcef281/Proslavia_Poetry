@@ -1,0 +1,161 @@
+:root {
+    --primary-color: rgb(188, 9, 9);
+    --secondary-color: rgb(0, 0, 255);
+    --third-color: darkgreen;
+    --bg-color: rgb(240, 240, 240);
+    --font-family: 'Lora', serif;
+    --heading-font: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* GLOBAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(127, 255, 127);
+}
+
+hr {
+    color: lavender;
+    background-color: lavender;
+    border: none;
+    height: 2px;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--third-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+header li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.credits {
+    text-align: center;
+    margin-right: 15px;
+    background-color: rgb(10, 10, 10);
+    color: lavenderblush;
+    border: 2px solid lavender;
+    float: left;
+    font-size: small;
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+}
+
+.credits img {
+    width: 100%;  /* Changed from 150px */
+    height: auto;
+    display: block;
+}
+
+.credits p {
+    margin: 5px 0;
+    font-size: smaller;
+    line-height: 1.3;
+}
+
+.poet {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(179, 219, 222);
+    font-size: larger;
+}
+
+.poet.clev {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/clev_bg.png);
+}
+
+.poet.luna {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/luna_bg.png);
+}
+
+.poet.nina {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/nina_bg.png);
+}
+
+footer {
+    background-color: var(--third-color);
+    color: rgb(127, 255, 127);
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+    .credits {
+        width: 120px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    
+    header li {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .credits {
+        width: 100px;
+        margin-right: 5px;
+        font-size: x-small;
+    }
+    
+    .credits p {
+        font-size: 0.7rem;
+    }
+    
+    header li {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+}
