@@ -15,7 +15,7 @@ async function fetchPoems() {
         poemsDisplay.innerHTML = ``;
         let poems = await fetch('poems.json')
         poems = await poems.json();
-        allPoems = poems; // add this line
+        allPoems = poems;
         
 
         poems.forEach(poem => {
